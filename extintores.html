@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aba de Extintores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Extintores</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Ajuda e Suporte</a></li>
+            <li><a href="#cadastro">Cadastrar Novo Extintor</a></li>
+            <li><a href="#cadastrados">Extintores Cadastrados</a></li>
+            <li><a href="#observacoes">Observações</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="cadastro">
+            <h2>Cadastrar Novo Extintor</h2>
+            <form>
+                <label for="responsavel">Responsável pela inspeção:</label>
+                <input type="text" id="responsavel" required>
+
+                <label for="datahora">Data e Hora:</label>
+                <input type="datetime-local" id="datahora" value="<?php echo date('Y-m-d\TH:i'); ?>" disabled>
+
+                <label for="equipe">Equipe de Serviço:</label>
+                <select id="equipe">
+                    <option>Alfa</option>
+                    <option>Bravo</option>
+                    <option>Charlie</option>
+                    <option>Delta</option>
+                </select>
+
+                <label for="andar">Andar:</label>
+                <select id="andar">
+                    <option>Subsolo</option>
+                    <option>1º andar</option>
+                    <option>2º andar</option>
+                </select>
+
+                <label for="local">Local:</label>
+                <input type="text" id="local" required>
+
+                <label for="selo">Número do selo do Inmetro:</label>
+                <input type="text" id="selo" required>
+
+                <label for="agente">Agente Extintor:</label>
+                <select id="Agente Extintor" name="Agente Extintor" required>
+                    <option value="Água">Água</option>
+                    <option value="CO2">CO2</option>
+                    <option value="ESPUMA MECÂNICA">ESPUMA MECÂNICA</option>
+                    <option value="PÓ BC">PÓ BC</option>
+                    <option value="PÓ ABC">PÓ ABC</option>
+                </select>
+
+                <label for="capacidade">Capacidade Extintora:</label>
+                <input type="text" id="capacidade" required>
+
+                <label for="tamanho">Tamanho:</label>
+                <input type="text" id="tamanho" required>
+
+                <label for="dataRecarga">Data da última recarga:</label>
+                <input type="date" id="dataRecarga" required>
+
+                <label for="dataTeste">Data do teste hidrostático:</label>
+                <input type="date" id="dataTeste" required>
+
+                <label>Possui placa de sinalização?</label>
+                <select id="placa">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                </select>
+
+                <label>O cilindro está em boas condições?</label>
+                <select id="condicoes">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                </select>
+
+                <label>O extintor está carregado - Manômetro?</label>
+                <select id="manometro">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                    <option>Não se Aplica</option>
+                </select>
+
+                <label>A alça de transporte está em boas condições?</label>
+                <select id="alca">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                </select>
+
+                <label>O lacre do pino de segurança está no local?</label>
+                <select id="lacre">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                </select>
+
+                <label>Suporte de parede/solo em boas condições?</label>
+                <select id="suporte">
+                    <option>Conforme</option>
+                    <option>Não Conforme</option>
+                    <option>Não se Aplica</option>
+                </select>
+
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes"></textarea>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="cadastrados">
+            <h2>Extintores Cadastrados</h2>
+            <p>Lista de extintores cadastrados aparecerá aqui.</p>
+        </section>
+
+        <section id="observacoes">
+            <h2>Observações</h2>
+            <p>Descreva observações aqui.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Inspeção de Extintores e Hidrantes</p>
+    </footer>
+</body>
+</html>
